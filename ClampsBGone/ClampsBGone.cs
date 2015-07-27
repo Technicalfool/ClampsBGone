@@ -40,6 +40,13 @@ namespace ClampsBGone
 			checkTimer.Enabled = true;
 			Debug.Log("[ClampsBGone] Started!");
 		}
+		public void OnApplicationQuit()
+		{
+			/*
+			 * Be nice and stop the timer running when the application quits.
+			 */
+			checkTimer.Enabled = false;
+		}
 
 		/*
 		 * Run this periodically.
